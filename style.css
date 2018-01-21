@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#sticker {
+    position: absolute;
+    z-index: 9;
+    background-color: #4CAF50;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #4CAF50;
+    border-radius: 2px;
+}
+
+#sticker_head {
+    margin: 15px;
+    padding: 5px;
+    cursor: move;
+    z-index: 10;
+    background-color: white;
+    color: #4CAF50;
+    border-radius: 5px;
+}
+
+#sticker2 {
+    position: absolute;
+    z-index: 9;
+    background-color: #4CAF50;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #4CAF50;
+    border-radius: 2px;
+}
+
+#sticker_head2 {
+    margin: 15px;
+    padding: 5px;
+    cursor: move;
+    z-index: 10;
+    background-color: white;
+    color: #4CAF50;
+    border-radius: 5px;
+}
+
+.area {
+  padding: 10px;
+  margin: 15px;
+  border-color: #4CAF50;
+}
+
+.button {
+    margin: 10px;
+  border-radius: 28px;
+  color: #000000;
+  font-size: 20px;
+  background: #ffffff;
+  padding: 10px 20px 10px 20px;
+  border: solid #000000 2px;
+  text-decoration: none;
+}
+
+.buttonWrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.here {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 350px;
+}
