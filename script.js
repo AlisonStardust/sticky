@@ -2,6 +2,7 @@
 $(document).ready(function() {
   $("#createSecond").click(function() {
     $(".stickers").clone().appendTo(".here").attr( 'id', 'sticker2' );
+    dragElement(document.getElementById(("sticker2")));
   });
     $("#removeSecond").click(function() {
     $("#sticker2").remove();
@@ -9,7 +10,7 @@ $(document).ready(function() {
 });
 
 
-//function drag element
+//function drag element, copied from w3schools
 
 dragElement(document.getElementById(("sticker")));
 
@@ -53,24 +54,26 @@ function dragElement(elmnt) {
 }
 
 
-//<---version 1 ---> does not work
+//<---version 1 --->
 
-// const colorpink = changeColor("#E91E63");
-// const colorblue = changeColor("#2196F3");
-// const colororange = changeColor("#FF9800");
-// const colorgrey = changeColor("#9E9E9E");
+const colorpink = () => changeColor("#E91E63");
+const colorblue = () => changeColor("#2196F3");
+const colororange = () => changeColor("#FF9800");
+const colorgrey = () => changeColor("#9E9E9E");
 
-// document.querySelector(".pink").addEventListener("click", colorpink);
-// document.querySelector(".blue").addEventListener("click", colorblue);
-// document.querySelector(".orange").addEventListener("click", colororange);
-// document.querySelector(".grey").addEventListener("click", colorgrey);
+document.querySelector(".pink").addEventListener("click", colorpink);
+document.querySelector(".blue").addEventListener("click", colorblue);
+document.querySelector(".orange").addEventListener("click", colororange);
+document.querySelector(".grey").addEventListener("click", colorgrey);
 
-// function changeColor(stickyColor) {
-//    document.getElementById("sticker").style.backgroundColor = stickyColor;
-//    document.getElementById("sticker2").style.backgroundColor = stickyColor;
-// }
+function changeColor(stickyColor) {
+   document.getElementById("sticker").style.backgroundColor = stickyColor;
+   document.getElementById("sticker2").style.backgroundColor = stickyColor;
+}
 
-//<--- version 2 --> works
+/*
+
+<--- version 2 -->
 
 document.querySelector(".pink").addEventListener("click", function() {setColor(".pink")});
 document.querySelector(".blue").addEventListener("click", function() {setColor(".blue")});
@@ -101,33 +104,35 @@ function setStickerColor(name, colorCode) {
   document.getElementById(name).style.backgroundColor = colorCode;
 };
 
-// <---version 3 ---> WORKS
-// const stickyColor = ["#E91E63", "#2196F3", "#FF9800", "#9E9E9E"];
+<---version 3 --->
+const stickyColor = ["#E91E63", "#2196F3", "#FF9800", "#9E9E9E"];
 
-// document.querySelector(".pink").addEventListener("click", soIClicked);
+document.querySelector(".pink").addEventListener("click", soIClicked);
 
-// function soIClicked() {
-//     document.getElementById("sticker").style.backgroundColor = stickyColor[0];
-//     document.getElementById("sticker2").style.backgroundColor = stickyColor[0];
-// };
+function soIClicked() {
+    document.getElementById("sticker").style.backgroundColor = stickyColor[0];
+    document.getElementById("sticker2").style.backgroundColor = stickyColor[0];
+};
 
-// document.querySelector(".blue").addEventListener("click", soIClicked2);
+document.querySelector(".blue").addEventListener("click", soIClicked2);
 
-// function soIClicked2() {
-//   document.getElementById("sticker").style.backgroundColor = stickyColor[1];
-//   document.getElementById("sticker2").style.backgroundColor = stickyColor[1];
-// };
+function soIClicked2() {
+  document.getElementById("sticker").style.backgroundColor = stickyColor[1];
+  document.getElementById("sticker2").style.backgroundColor = stickyColor[1];
+};
 
-// document.querySelector(".orange").addEventListener("click", soIClicked3);
+document.querySelector(".orange").addEventListener("click", soIClicked3);
 
-// function soIClicked3() {
-//   document.getElementById("sticker").style.backgroundColor = stickyColor[2];
-//   document.getElementById("sticker2").style.backgroundColor = stickyColor[2];
-// };
+function soIClicked3() {
+  document.getElementById("sticker").style.backgroundColor = stickyColor[2];
+  document.getElementById("sticker2").style.backgroundColor = stickyColor[2];
+};
 
-// document.querySelector(".grey").addEventListener("click", soIClicked4);
+document.querySelector(".grey").addEventListener("click", soIClicked4);
 
-// function soIClicked4() {
-//   document.getElementById("sticker").style.backgroundColor = stickyColor[3];
-//   document.getElementById("sticker2").style.backgroundColor = stickyColor[3];
-// };
+function soIClicked4() {
+  document.getElementById("sticker").style.backgroundColor = stickyColor[3];
+  document.getElementById("sticker2").style.backgroundColor = stickyColor[3];
+};
+
+*/
